@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>College Review</h1>
+    <hr/>
+
+    <p><strong><%= data.name %></strong></p>
+    <p><strong><%= data.collegeName %></strong></p>
+
+    <p><strong>Overall Rating:</strong>
+            <% for (let i = 0; i < data.rate; i++) { %>
+                ⭐
+            <% } %>
+    </p>
+
+    <p>The placement opportunities at this college are<strong> <%= data.Placement %> </strong></p>
+    <p><strong><%= data.studies %> </strong>academics </p>
+    <p>The faculty is<strong> <%= data.Faculty %> </strong></p>
+
+    <h2>Review Message</h2>
+    <p>
+        <%= data.Review %>
+    </p>
+
+</body>
+</html>

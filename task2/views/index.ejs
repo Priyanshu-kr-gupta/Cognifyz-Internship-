@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (error) { %>
+        <p>Kindly provide the following data <strong> <%= error %> </strong></p>
+    <% } %>
+
+    <div>
+        <h1><pre>      College review Form</pre></h1>
+        <hr/><br/>
+        <center>
+        <form action="http://localhost:5000/submit" method="post" onsubmit=" return validateForm()">
+
+            <h2>Personal details</h2>
+
+            <label for="email"><b>email</b></label>
+            <input type="email" name="email" id="email">
+                &nbsp; &nbsp; &nbsp; &nbsp;
+            <label for="name"><b>name</b></label>
+            <input type="text" name="name" id="name">
+
+            <br/>
+            <br/>
+            <label for="collegeName"><b>College name</b></label>
+            <input type="text" name="collegeName" id="collegeName">
+            <br/>
+
+            <h2>Ratings</h2>
+
+
+            <h4>how would you rate your college for</h4>
+
+            <label for="studies"> <b>Academics</b></label>
+            <select name="studies" id="studies">
+                <option value="extraordinay">extraordinay</option>
+                <option value="best">best</option>
+                <option value="better" >better</option>
+                <option value="good">good</option>
+                <option value="poor" >poor</option>
+                <option value="" selected>Select</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label for="Faculty"> <b>Faculty</b></label>
+            <select name="Faculty" id="Faculty">
+                <option value="extraordinay">extraordinay</option>
+                <option value="best">best</option>
+                <option value="better" >better</option>
+                <option value="good" >good</option>
+                <option value="poor" >poor</option>
+                <option value="" selected>Select</option>
+
+            </select>
+            &nbsp;&nbsp;&nbsp;
+            <label for="Placement"> <b>Placement</b></label>
+            <select name="Placement" id="Placement">
+                <option value="extraordinay">extraordinay</option>
+                <option value="best">best</option>
+                <option value="better" >better</option>
+                <option value="good">good</option>
+                <option value="poor" >poor</option>
+                <option value="" selected>Select</option>
+
+            </select>
+            <br/>
+            <br/>
+            
+            
+            <h4>Overall rating</h4>
+            
+            <input type="radio" name="rate" id="1star" value="1">⭐ &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="rate" id="2star" value="2">⭐⭐&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="rate" id="3star" value="3">⭐⭐⭐&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="rate" id="4star" value="4">⭐⭐⭐⭐&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="rate" id="5star" value="5">⭐⭐⭐⭐⭐&nbsp;&nbsp;&nbsp;
+
+            
+            <h2>Review</h2>
+            <textarea name="Review" id="Review" cols="30" rows="5"></textarea><br/><br/>
+            <input type="submit" value="submit">
+        </form>
+    </center>
+    </div>
+
+<script>
+
+    function validateForm() {
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        var collegeName = document.getElementById("collegeName").value;
+        var studies = document.getElementById("studies").value;
+        var faculty = document.getElementById("Faculty").value;
+        var placement = document.getElementById("Placement").value;
+        var rate = document.querySelector('input[name="rate"]:checked');
+        var review = document.getElementById("Review").value;
+
+        if (name === "") {
+                alert("Name is required!");
+                return false;
+        }
+        if (collegeName === "") {
+                alert("College name is required!");
+                return false;
+        }
+        if (review === "") {
+                alert("Review is required!");
+                return false;
+        }
+        if (studies === "" || faculty === "" || placement === "") {
+                alert("Kindly select all ratings");
+                return false;
+
+            }
+            if (rate === null) {
+                alert("Kindly provide the Overall rating ");
+                return false;
+            }
+
+        return true;
+    }
+    </script>
+</body>
+</html>
