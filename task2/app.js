@@ -1,4 +1,5 @@
 const express = require("express")
+const fs = require("fs");
 const app=express();
 app.use(express.urlencoded({extended:true}))
 
@@ -26,7 +27,7 @@ app.post("/submit",async (req,res)=>{
         else if (studies === "" || Faculty === "" || Placement === "") {
                 error = "rating"
             }
-        else if (rate === null) {
+        else if (rate === undefined) {
                 error="overall rating"
         
         }
@@ -35,8 +36,24 @@ app.post("/submit",async (req,res)=>{
                 return res.render("index", { error});
         }
 
-        
-        res.render("greetings",{data:req.body});
+        const dataToSave = {
+                email,
+                name,
+                collegeName,
+                studies,
+                Faculty,
+                Placement,
+                rate,
+                Review,
+                timestamp: new Date().toISOString()
+            };
+
+            fs.appendFile("reviews.json", JSON.stringify(dataToSave) + "\n", (err) => {
+                if (err) {
+                    return res.render("index", { error: "An error occurred while saving your review. Please try again." });
+                }
+                res.render("greetings",{data:req.body});
+                })
 
 })
 
