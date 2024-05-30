@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.allskills{
+    /* background: #000; */
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 5%;
+}
+.skillsBox{
+    width: clamp(120px,25%,200px);
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  5px 5px 10px #8f8f8f,
+    -5px -5px 10px #ffffff;
+    cursor: pointer;
+    border-radius: 5%;
+    margin-bottom:10%;
+}
+/* .skillsBox :hover{
+    background-color: rgb(200, 254, 248);
+    border-radius: 5%;
+} */
+
+.skillsBox .skillsCred svg{
+   
+    font-size: 80px;
+}
+@media (max-width:800px) {
+    .skillsBox .skillsCred svg{
+   
+        font-size: 60px;
+    }   
+}
+@media (max-width:550px) {
+    .skillsBox .skillsCred svg{
+   
+        font-size: 40px;
+    }   
+}
+.skillsBox .skillsCred {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
