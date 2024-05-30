@@ -8,8 +8,23 @@
 width: 2px;
 }
 .mainContainer::-webkit-scrollbar-thumb{
-  color: rebeccapurple;
+  color: rgb(217, 181, 254);
 }
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(27, 76, 76); 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: aliceblue;
+  border-radius: 10px;
+}
+
+
 @media (max-width:620px) {
   .mainContainer{
     width: 100%;

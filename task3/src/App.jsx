@@ -13,6 +13,8 @@ function App() {
   return (
     <div className='mainContainer'>
     <Header/>
+    <marquee>this is just a dummy website</marquee>
+
     <Sidebar/>
     <Hero/>
     <Myworks/>

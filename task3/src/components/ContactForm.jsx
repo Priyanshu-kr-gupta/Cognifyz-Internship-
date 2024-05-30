@@ -26,6 +26,9 @@ export default function ContactForm() {
  
    <center><button type="submit" className="btn btn-primary" style={{width:"200px"}}>Send</button></center> 
 </form>
+<br/>
+<br/>
+<br/>
     </div>
     </>
   )
