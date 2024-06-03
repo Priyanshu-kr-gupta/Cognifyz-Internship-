@@ -1,0 +1,9 @@
+@media (max-width:750px){
+    .search{
+        width: 95%;
+        position: absolute;
+    }
+    .brandname{
+        display: none;
+    }
+}

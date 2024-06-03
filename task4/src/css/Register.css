@@ -1,0 +1,40 @@
+.register{
+    /* border: 2px solid #00ffff; */
+    /* box-shadow:inset 0 0 10px aqua; */
+    /* animation: animate 2s linear infinite; */
+}
+@keyframes animate {
+    0%{
+    box-shadow: 0 0 500px aqua;
+
+    }
+    50%{
+        box-shadow: 0 0 500px wheat;
+
+    }
+    100%{
+        box-shadow:0 0 500px aqua;
+
+    }
+}
+.registerbox{
+    border: 2px solid rgba(245, 222, 179, 0.273);
+    padding: 20px;
+    /* animation: animate 2s linear infinite; */
+    box-shadow:-10px -10px 10px rgba(128, 128, 128, 0.564), inset -10px -10px 20px rgba(82, 82, 82, 0.499);
+
+}
+#eml,#nm{
+    color: aqua;
+    position: relative;
+    top: -33px;
+    left: -40%;
+    transition: all ease 0.3s;
+    color: black;
+    cursor:text;
+}
+#email:focus ~ #eml,#name:focus ~ #nm{
+color: aqua;
+    top: -65px;
+    left: -45%;
+}
