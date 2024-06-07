@@ -1,0 +1,91 @@
+        .drawer{
+            width: 0%;
+            height: 90vh;
+            position: absolute;
+            left: 0;
+            top: 10vh;
+            /* z-index: 100; */
+            transition: all ease 0.2s;
+            overflow: hidden;
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            z-index: 100;
+        
+           
+        }
+        #tgl{
+            position: absolute;
+            top: 0;
+            height: 10vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1.5%;
+            z-index: 12;
+            cursor:pointer;
+        }
+        #toggle:checked ~ .drawer{
+            width: 100%;
+        }
+        .drawerMenu{
+            /* background: rgba(255, 228, 196, 0.5); */
+            background: white;
+            box-shadow: 0 0 10px rgb(219, 219, 219);
+            width: 22%;
+            backdrop-filter: blur(5px);
+           display: flex;
+           flex-direction: column-reverse;
+           align-items: center;
+          /* gap: 10px; */
+            overflow-y: scroll;
+
+        }
+        .drawerMenu a{
+            background: rgb(250, 218, 180);
+            box-shadow: 0 0 10px white;
+        }
+        .drawerMenu::-webkit-scrollbar{
+            width: 2px;
+            background: #f66b2b1f;
+        }
+        .extraDrawer{
+            width: 75%;
+            padding: 0;
+
+        }
+        .extraDrawer label{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            
+            backdrop-filter: blur(5px);
+        }
+        @media (max-width:1000px) {
+            .drawerMenu{
+                width: 35%;
+            }
+            .extraDrawer{
+                width: 65%;
+    
+            }
+        }
+        @media (max-width:700px) {
+            .drawerMenu{
+                width: 50%;
+            }
+            .extraDrawer{
+                width: 50%;
+    
+            }
+        }
+        @media (max-width:450px) {
+            .drawerMenu{
+                width: 80%;
+            }
+            .extraDrawer{
+                width: 20%;
+    
+            }
+        }
