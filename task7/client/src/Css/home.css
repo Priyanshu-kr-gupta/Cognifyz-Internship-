@@ -1,0 +1,55 @@
+.diary{
+    width: clamp(300px,90%,1000px);
+    padding:20px;
+    background-color: aliceblue;
+    height: 50%;
+    resize: none;
+    outline: none;
+    z-index: 5;
+    color:  rgb(210, 139, 241);
+    background-color:rgba(171, 120, 225, 0.3);
+    
+    /* background: rgb(41,40,82); */
+    font-family: cursive;
+    border-right: 2px solid rgba(171, 120, 225, 0.2);
+    border-left: 2px solid  rgba(171, 120, 225,0.2);
+    border-top: 2px solid  rgba(171, 120, 225,0.2);
+    /* box-shadow: 10px -10px 10px rgba(171, 120, 225,0.2); */
+    font-size: 18px;
+
+}
+.diary::selection{
+    background: #f895f8;
+    color: black;
+}
+.diarycontainer{
+    background: rgb(0,12,34);
+
+}
+.diary::-webkit-scrollbar{
+    background: rgb(10, 0, 53);
+    width: 3px;
+}
+.diary::-webkit-scrollbar-thumb{
+    background: #f895f8;
+
+}
+.submitbtn{
+    /* position: absolute;
+    top: 50%; */
+    height: 40px;
+    width: clamp(300px,90%,1000px);
+    text-align: right;
+    padding-right: 10px;
+    background-color:rgba(171, 120, 225, 0.307);
+    color:#f895f8;
+    z-index: 5;
+    font-size: 20px;
+    font-weight: 900;
+    border-right: 2px solid rgba(171, 120, 225, 0.2);
+    border-left: 2px solid  rgba(171, 120, 225,0.2);
+    border-bottom: 2px solid  rgba(171, 120, 225,0.2);
+    outline: none;
+    /* box-shadow: -10px 10px 10px rgba(171, 120, 225,0.2); */
+
+}

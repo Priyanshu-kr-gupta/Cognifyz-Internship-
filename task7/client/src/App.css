@@ -1,0 +1,9 @@
+
+.Genzo::-webkit-scrollbar{
+    background: rgb(10, 0, 53);
+    width: 3px;
+}
+.Genzo::-webkit-scrollbar-thumb{
+    background: #f895f8;
+
+}
