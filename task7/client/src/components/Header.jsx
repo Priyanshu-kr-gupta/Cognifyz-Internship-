@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import "../Css/header.css"
-import Sidebar from './Sidebar'
 import Profile from './Profile';
 export default function Header() {
   const [profiletoggler,setProfiletoggler]=useState(0);
