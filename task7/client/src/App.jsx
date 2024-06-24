@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import Header from './components/Header'
 import './App.css'
 import Home from './components/Home'
-import Footer from './components/Footer'
 import {  Route, Routes } from 'react-router-dom'
 import Login from './components/Login'
+import ErrorPage from './components/ErrorPage'
 
 function App() {
 
@@ -13,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path="/err/:error" element={<ErrorPage/>} />
       </Routes>
     </div>
   )

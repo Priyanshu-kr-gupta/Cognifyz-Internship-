@@ -21,23 +21,39 @@ export default function Home() {
   },[])
 
   const getcontent =async ()=>{
-    const response = await fetch(
-      "https://api-inference.huggingface.co/models/Melonie/text_to_image_finetuned",
+    try{
+
+      const response = await fetch(
+        "https://api-inference.huggingface.co/models/Melonie/text_to_image_finetuned",
       {
         headers: { Authorization: "Bearer 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" },
         method: "POST",
         body:JSON.stringify({inputs:content}),
       }
     );
-    // console.log(response)
-    const result = await response.blob();
-    return result;
+    console.log(response)
+    if(!response.ok)
+    {
+      navigate(`/err/${response.status}`)
+
+    }
+    else
+    {
+
+      const result = await response.blob();
+      return result;
+    }
+  }
+  catch{
+    console.log("apple")
+  }
         
   }
   const texttoImage = async() =>{
     setStatus(0);
     const blob = await getcontent();
     const objUrl = URL.createObjectURL(blob);
+    if(objUrl)
     setImageSrc(objUrl);
     window.scrollTo(0, document.body.scrollHeight);
     setStatus(1);
