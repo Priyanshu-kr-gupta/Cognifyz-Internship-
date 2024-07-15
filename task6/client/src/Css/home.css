@@ -1,39 +1,33 @@
 .diary{
-    width: clamp(310px,50%,1000px);
+    width: clamp(300px,80%,1000px);
+    /* width: 80%; */
     padding:25px;
-    /* background: #000; */
-    height: 100%;
-    background: rgba(245, 245, 220, 0.434);
+    height: 80%;
     outline: none;
     z-index: 3;
     font-family: cursive;
     resize: none;
-    border-left: 20px dotted white;
-    border-right: 20px dotted white;
+    /* background: linear-gradient(to right bottom,#D8D1C5,#ECE7E3,#F0EAE2); */
+    background-color: beige;
+    border-bottom-right-radius: 20px;
     /* box-shadow: 0 0 100px 250px white; */
-
-
-
-
+    
 }
+.diarydate{
+    border-top-left-radius: 20px;
+   width: clamp(300px,80%,1000px);
+    background-color: white;
+    height: 7%;
+    padding-left: 4%;
+}
+
 .diarycontainer{
-    background:radial-gradient( white,rgba(255, 228, 196, 0.673),white);
-    /* box-shadow:  0px -10px 1000px 50px bisque; */
+    /* background:radial-gradient( white,rgba(255, 228, 196, 0.673),white); */
+    /* background:whitesmoke; */
+    background:linear-gradient(to right, #EADFCF, #e3d3bb);
+    /* background-color: white; */
+
 }
 .diary::-webkit-scrollbar{
     width: 2px;
-}
-.diarycontainer::before{
-    content: "";
-    width: clamp(310px,50%,1000px);
-    height: 90vh;
-    position: absolute;
-    background-image: url("../assets/ruler.avif");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    z-index: 2;
-    opacity: 0.3;
-    box-shadow: inset 0px -10px 100px 10px black;
 }

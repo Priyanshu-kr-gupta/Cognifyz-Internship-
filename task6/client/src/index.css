@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.main{
+    background:linear-gradient(to right top ,#A38473,#B39482,#C19F87,#CCA586,#DDAD89);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -11,7 +11,7 @@ import Showdiary from './components/Showdiary'
 function App() {
 
   return (
-    <div className='w-full h-[100vh]'>
+    <div className='mainContainer'>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>

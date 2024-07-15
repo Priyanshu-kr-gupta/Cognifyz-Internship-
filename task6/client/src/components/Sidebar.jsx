@@ -1,5 +1,6 @@
 import React, { useEffect ,useState} from 'react'
 import { Link } from 'react-router-dom';
+import { MdOutlineSort } from "react-icons/md";
 import "../Css/sidebar.css"
 export default function Sidebar() {
   const [data,setData]=useState([]);
@@ -25,7 +26,7 @@ const backendApi = "http://localhost:5000";
   },[])
   return (
     <>
-    <label htmlFor="toggle" id="tgl">🟰</label>
+    <label htmlFor="toggle" id="tgl"><MdOutlineSort/></label>
    <input type="checkbox" name="ap" id="toggle" style={{display: "none"}} />
     <div className="drawer">
       <div className='drawerMenu'>

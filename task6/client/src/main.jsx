@@ -7,7 +7,7 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-    <div className='main'>
+    <div className='main w-full h-[100vh]'>
 
     <App />
     </div>

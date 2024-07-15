@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "name": "keeper_server",
     "builds": [
      {
       "src": "index.js",

@@ -1,0 +1,7 @@
+.mainContainer{
+width: clamp(320px,90%,1800px);
+border-radius: 20px;
+height: 95vh;
+overflow: hidden;
+/* background:linear-gradient(to right,#AE7F6F,#BB836A,#C58770); */
+}

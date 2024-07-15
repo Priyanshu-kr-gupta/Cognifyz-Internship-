@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import Header from "../components/Header"
 import { useNavigate } from 'react-router-dom';
-
+import "../Css/home.css"
 export default function Showdiary() {
   const uid=localStorage.getItem("userid")
   const navigate = useNavigate();
@@ -35,8 +35,13 @@ const backendApi = "http://localhost:5000";
     return (
     <>
      <Header />
-    <div className="w-full h-[90vh] flex justify-center items-center  diarycontainer relative">
-    <input value={date} disabled className='absolute bottom-5 z-10 backdrop-blur-[2px] text-center'/>
+    <div className="w-full h-[90vh] flex flex-col justify-center items-center  diarycontainer relative">
+    <div className='diarydate flex items-center gap-4'>
+    <div className='w-[10px] h-[10px] p-2 bg-[#cd8080]' style={{borderRadius:"50%"}}>
+
+    </div>
+    <input value={date} disabled />
+    </div>
     
    
     <textarea className='diary' onChange={(e)=>{setContent(e.target.value)}}  value={content} disabled />

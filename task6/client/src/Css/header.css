@@ -18,5 +18,6 @@
 }
 .navbar{
 /* background:linear-gradient(to right,white,rgba(255, 228, 196, 0.673)); */
-background: rgba(255, 228, 196, 0.378);
+/* background: rgba(255, 228, 196, 0.378); */
+background:linear-gradient(to right,#AE7F6F,#BB836A,#C58770);
 }

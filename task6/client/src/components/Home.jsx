@@ -55,8 +55,13 @@ export default function Home() {
   return (
   <>
   <Header />
-  <div className="w-full h-[90vh] flex justify-center items-center  diarycontainer relative">
-    <input value={date} disabled className='absolute bottom-5 z-10 backdrop-blur-[2px] text-center'/>
+  <div className="w-full h-[90vh] flex flex-col justify-center items-center  diarycontainer relative">
+    <div className='diarydate flex items-center gap-4'>
+    <div className='w-[10px] h-[10px] p-2 bg-[yellowgreen]' style={{borderRadius:"50%"}}>
+
+    </div>
+    <input value={date} disabled />
+    </div>
     
    
     <textarea  className='diary' onChange={(e)=>{setContent(e.target.value); debounce();}}  value={content}/>
