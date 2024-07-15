@@ -5,7 +5,7 @@ export default function Register() {
 
     const navigate=useNavigate();
 
-    const backendApi = "http://localhost:5000";
+    const backendApi =  process.env.REACT_APP_HOST;
 
 
     const [email,setEmail]= useState("")

@@ -7,7 +7,7 @@ export default function Sidebar() {
   const uid=localStorage.getItem("userid")
   const [date,setDate]=useState("");
 
-const backendApi = "http://localhost:5000";
+const backendApi =  process.env.REACT_APP_HOST;
   const getnote =async ()=>{
     const respon = await fetch(`${backendApi}/api/note/getAllNote?uid=${uid}`, {
       method: "POST",

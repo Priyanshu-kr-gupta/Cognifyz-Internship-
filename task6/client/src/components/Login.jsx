@@ -5,7 +5,7 @@ export default function Login() {
   const navigate=useNavigate();
 
     const [mes,setMes]=useState("Login");
-const backendApi = "http://localhost:5000";
+const backendApi =  process.env.REACT_APP_HOST;
 
     // const navigate=useNavigate();
     const userInitial={email:"",password:""}

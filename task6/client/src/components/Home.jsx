@@ -10,7 +10,7 @@ export default function Home() {
   const uid=localStorage.getItem("userid")
   const dte =new Date
   const date=(dte.getDate()+"-"+parseInt(dte.getMonth()+1)+"-"+dte.getFullYear());
-  const backendApi = "http://localhost:5000";
+  const backendApi =  process.env.REACT_APP_HOST;
   
   useEffect(()=>{
   if (localStorage.getItem("auth-token")) {

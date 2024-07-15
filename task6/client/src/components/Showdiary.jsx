@@ -7,7 +7,7 @@ export default function Showdiary() {
   const uid=localStorage.getItem("userid")
   const navigate = useNavigate();
 
-const backendApi = "http://localhost:5000";
+const backendApi =  process.env.REACT_APP_HOST;
 
     const parameter=useParams();
   const date=parameter.dt;
