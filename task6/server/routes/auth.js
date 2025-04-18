@@ -26,13 +26,22 @@ var transporter = nodemailer.createTransport({
     }
   });
   
-  var mailOptions = {
+var mailOptions = {
     from: 'dlnpriyanshu@gmail.com',
     to: `${email}`,
     subject: 'Keeper',
-    text: `Thanku for redistering in 📒 Keeper <br/> Your one time password (OTP) is ${otp}`
-    
-  };
+    html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+            <h2 style="text-align: center; color: #4CAF50;">Welcome to 📒 Keeper</h2>
+            <p style="font-size: 16px; color: #333;">Thank you for registering with Keeper. Your one-time password (OTP) is:</p>
+            <div style="text-align: center; margin: 20px 0;">
+                <span style="font-size: 24px; font-weight: bold; color: #4CAF50;">${otp}</span>
+            </div>
+            <p style="font-size: 14px; color: #555;">Please use this OTP to complete your registration. If you did not request this, please ignore this email.</p>
+            <p style="font-size: 14px; color: #555;">Thank you,<br/>The Keeper Team</p>
+        </div>
+    `
+};
   otp=toString(otp);
   transporter.sendMail(mailOptions, async function(error, info){
     if (error) {
