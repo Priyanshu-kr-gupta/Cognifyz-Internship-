@@ -11,26 +11,26 @@ export default function Footer() {
     <div className="container-fluid" >
      <div className="row">
         <div className="col"  style={{display:"grid",justifyContent:"center"}}>
-          <a href='#'><FaLinkedin/></a>
+          <a href='https://www.linkedin.com/in/priyanshu-kumar-143995246/'><FaLinkedin/></a>
         </div>
-        <div className="col" style={{display:"grid",justifyContent:"center"}}>
+        {/* <div className="col" style={{display:"grid",justifyContent:"center"}}>
         <a href='#'><FaInstagram/></a>
         
-        </div>
+        </div> */}
         <div className="col" style={{display:"grid",justifyContent:"center"}}>
-        <a href='#'><FaGithub/></a>
+        <a href='https://github.com/Priyanshu-kr-gupta/'><FaGithub/></a>
         
         </div>
         <div className="col" style={{display:"grid",justifyContent:"center"}}>
-        <a href='#'><SiCodeforces/></a>
+        <a href='https://codeforces.com/profile/Priyanshu_Kmr'><SiCodeforces/></a>
         
         </div>
         <div className="col" style={{display:"grid",justifyContent:"center"}}>
-        <a href='#'><SiCodechef/></a>
+        <a href='https://www.codechef.com/users/priyanshu_kmr'><SiCodechef/></a>
         
         </div>
         <div className="col" style={{display:"grid",justifyContent:"center"}}>
-        <a href='#'><MdEmail/></a>
+        <a href='mailto:dlnpriyanshu@gmail.com'><MdEmail/></a>
         
         </div>
     </div>

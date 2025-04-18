@@ -7,6 +7,7 @@
       origin: "*"
     })
   );
+  app.use(express.json());
   const port=5000;
   const connectToMongo=require('./dbConnect/db');
 

@@ -3,6 +3,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { FaGithub } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { FaDownload } from "react-icons/fa6";
+import resume from "../assets/resumetemp.pdf"
 export default function Header() {
   return (
     <>
@@ -20,7 +21,7 @@ export default function Header() {
                 {/* <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom" > */}
   {/* Tooltip on bottom */}
 {/* </button> */}
-                <FaDownload />
+                <a href={resume} download><FaDownload className='cursor-pointer'/></a>
                 </div>
                     
         </div>

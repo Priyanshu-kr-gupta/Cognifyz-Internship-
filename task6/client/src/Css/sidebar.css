@@ -44,7 +44,7 @@
 
         }
         .drawerMenu a{
-            background: rgb(250, 218, 180);
+            /* background: rgb(250, 218, 180); */
             box-shadow: 0 0 10px white;
         }
         .drawerMenu::-webkit-scrollbar{
@@ -52,7 +52,7 @@
             background: #f66b2b1f;
         }
         .extraDrawer{
-            width: 75%;
+            width: 100%;
             padding: 0;
 
         }
@@ -61,7 +61,8 @@
             width: 100%;
             height: 100%;
             
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(3px);
+            background: #00000057;
         }
         @media (max-width:1000px) {
             .drawerMenu{

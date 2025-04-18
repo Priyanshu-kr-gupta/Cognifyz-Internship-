@@ -5,7 +5,8 @@ export default function Login() {
   const navigate=useNavigate();
 
     const [mes,setMes]=useState("Login");
-const backendApi =  process.env.REACT_APP_HOST;
+
+const backendApi =  import.meta.env.VITE_HOST;
 
     // const navigate=useNavigate();
     const userInitial={email:"",password:""}
@@ -40,17 +41,17 @@ const backendApi =  process.env.REACT_APP_HOST;
     }
  
   return (
-    <div  className='w-full h-[90vh] flex  flex-col items-center justify-around'>
+    <div  className='w-full h-[90vh] mt-[2vh] bg-white rounded-[10px] flex  flex-col items-center justify-around'>
     <p className='relative  text-[20px]'>Welcome to 📒 Keeper</p>
     <div className='lg:w-[30%] h-[50%] rounded-3xl flex justify-center flex-col items-center md:w-[50%] sm:w-[60%] w-[90%] registerbox'>
-      <form onSubmit={handleSubmit} className='w-[60%] flex justify-center flex-col items-center'>
-      <div className='w-full mb-2'>
-          <label htmlFor="email">Email</label>
-          <input name="email" type="email" value={email}  id="email" onChange={handleChange}  className='w-full'/>
+      <form onSubmit={handleSubmit} className='w-[90%] flex justify-center flex-col items-center'>
+      <div className='w-full mb-1'>
+          <label htmlFor="email" className='ml-[-5%]'>Email</label>
+          <input name="email" type="email" value={email}  id="email" onChange={handleChange} placeholder='enter your email here' className='w-full mb-3 p-2'/>
         </div>
         <div className='w-full mb-2'>
-          <label htmlFor="password">Password</label>
-          <input name="password" type="password" value={password}  id="password" onChange={handleChange}  className='w-full'/>
+          <label htmlFor="password" className='ml-[-5%]'>Password</label>
+          <input name="password" type="password" value={password}  id="password" onChange={handleChange} placeholder='enter your password' className='w-full p-2'/>
         </div>
         <br/>
         <br/>
@@ -59,7 +60,7 @@ const backendApi =  process.env.REACT_APP_HOST;
         </button>
       </form>
       </div>
-      <h5 className='text-center'>Don't have a account ? <br/> <Link to="/register">Register</Link></h5>
+      <h5 className='text-center'>Don't have a account ? <br/> <Link to="/register" className=' border-b-2 border-b-black'>Register</Link></h5>
    
     </div>
   )

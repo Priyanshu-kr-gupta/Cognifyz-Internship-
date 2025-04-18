@@ -7,7 +7,8 @@ export default function Showdiary() {
   const uid=localStorage.getItem("userid")
   const navigate = useNavigate();
 
-const backendApi =  process.env.REACT_APP_HOST;
+
+const backendApi =  import.meta.env.VITE_HOST;
 
     const parameter=useParams();
   const date=parameter.dt;
@@ -23,13 +24,13 @@ const backendApi =  process.env.REACT_APP_HOST;
     const getcontent =async ()=>{
         // console.log(date)
         const respon = await fetch(`${backendApi}/api/note/getNote?date=${date}&uid=${uid}`, {
-                method: "POST",
+                method: "GET",
                 headers: {
                     "Content-Type": "Application/json",
                 },
             })
             const result=await respon.json();
-            setContent((result[0].content));
+            setContent((result.content));
             
       }
     return (

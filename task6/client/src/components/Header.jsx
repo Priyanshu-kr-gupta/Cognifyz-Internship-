@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import "../Css/header.css"
 import Sidebar from './Sidebar'
 import Profile from './Profile';
-import { FaUserCircle } from "react-icons/fa";
+import { FaCompress, FaCross, FaCrosshairs, FaUserCircle } from "react-icons/fa";
+import { MdCurtainsClosed, MdWrongLocation } from 'react-icons/md';
 export default function Header() {
   const [profiletoggler,setProfiletoggler]=useState(0);
   return (
@@ -20,7 +21,7 @@ export default function Header() {
                <div className='z-10 mr-3'>
 
                 {/* <a className='mr-3'>🪟</a> */}
-                <button onClick={()=>{setProfiletoggler(!profiletoggler)}}>{!profiletoggler?<FaUserCircle className='text-[22px] text-white'/>:"❌"}</button>
+                <button onClick={()=>{setProfiletoggler(!profiletoggler)}}>{!profiletoggler?<FaUserCircle className='text-[22px] text-white'/>:<FaCompress className='text-white'/>}</button>
                </div>
 
                     

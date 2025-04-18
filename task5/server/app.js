@@ -13,7 +13,7 @@ const port=5000;
 
 app.get("/",(req,res)=>{
         
-        const content=fs.readFileSync("db.json","utf-8",(err,data)=>{});
+        const content=fs.readFileSync("db.json");
         const dt=JSON.parse(content);
         res.json(dt);
 })
@@ -60,9 +60,7 @@ app.post("/submit",async (req,res)=>{
 })
 app.post("/delete",async (req,res)=>{
         const { registration} = req.query;
-            const content=fs.readFileSync("db.json","utf-8",(err,data)=>{
-                console.log(data)
-            });
+            const content=fs.readFileSync("db.json")
             const data=JSON.parse(content);
             const newdata=data.filter(obj=> obj.registration != registration)
             
@@ -93,9 +91,7 @@ app.get("/update",async (req,res)=>{
         }
 
        
-            const content=fs.readFileSync("db.json","utf-8",(err,data)=>{
-                console.log(data)
-            });
+            const content=fs.readFileSync("db.json")
             const data=JSON.parse(content);
             const newdata=data.map((val)=>{
                 if(val.registration==registration)

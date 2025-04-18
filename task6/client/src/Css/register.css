@@ -1,6 +1,6 @@
 .registerbox{
     /* border: 2px solid red; */
-    box-shadow: 0 0 10px rgb(217, 217, 217);
+    /* box-shadow: 0 0 10px rgb(217, 217, 217); */
 }
 .registerbox input{
     outline: none;
